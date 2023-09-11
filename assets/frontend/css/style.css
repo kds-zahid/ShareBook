@@ -1,0 +1,843 @@
+/*_________________login_page_start___________________________*/
+.loginBg{
+    background:black;
+    color:#E31AAD;
+}
+.loginBg *{
+    border-radius:5px;
+    padding:5px;
+}
+.loginBg center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loginBg form{
+    background:white;
+    color:#E31AAD;
+    width:300px;
+    padding:5px;
+}
+.loginBg form input{
+    width:95%;
+}
+.loginBg form label{
+    float:left;
+}
+.loginBg form button{
+    background:white;
+    color:#E31AAD;
+    border-radius:5px;
+    border:1px solid black;
+}
+/*_________________login_page_end___________________________*/
+
+@media screen and (max-width: 600px) {
+    /*_________________header_page_start___________________________*/
+    *{
+        margin:0;
+    }
+    .header{
+        padding:10px;
+        background:black;
+        color:#E31AAD;
+        overflow:auto;
+        width: 80%;
+        margin:auto;
+    }
+    .header .headerLeft{
+        float:left;
+    }
+    .header .headerLeft .brand{
+        font-size:50px;
+        font-weight:bold;
+    }
+    .header .headerLeft .menu{
+        margin-bottom:0;
+    }
+    ul.hdrMenu{
+        margin-left:-40;
+        text-align:left;
+    }
+    ul.hdrMenu li{
+        display:inline;
+    }
+    ul.hdrMenu li a{
+        color:#E31AAD;
+        text-decoration:none;
+    }
+    .header .headerPicCover{
+        margin-right:10px;
+        float:right;
+        border-radius:50%;
+        border:5px double #EC008C;
+        visibility:hidden;
+        position: absolute;
+
+    }
+    .header .headerPic{
+        background:#92278F;
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        text-align:center;
+        //border:5px dashed #EC008C;
+    }
+    /*_________________header_page_end___________________________*/
+    /*_________________content_start___________________________*/
+    section.content{	
+        padding:10px;
+        background:tomato;
+        background-image: url('../img/content/bg.gif');
+        background-attachment:fixed;
+        color:#E31AAD;
+        overflow:auto;
+        width: 80%;
+        margin:auto;
+    }
+    section.content .slide{
+        visibility: hidden;
+        position: absolute;
+        float:left;
+        //background:red;
+        margin:2px;
+        border:1px solid black;
+        border-radius:5px;
+        width:94px;
+        height:500px;
+    }
+    section.content .contentBody{
+        //width:50%;
+        height:500px;
+        //float:left;
+        //background:green;
+        margin:2px;
+        border:1px solid black;
+        border-radius:5px;
+        overflow-x:scroll;
+    }
+    section.content .contentBody .contentMain{
+        //background:red;
+        margin:10px;
+    }
+    /*_________________content_end___________________________*/
+    /*_________________footer_page_start___________________________*/
+    footer{
+        padding:10px;
+        background:black;
+        color:#E31AAD;
+        overflow:auto;
+        width:80%;
+        margin:auto;
+    }
+    footer .left{
+        float:left;
+    }
+    footer .right{
+        float:right;
+    }
+    /*_________________footer_page_end___________________________*/ 
+    /*_________________home_page_start___________________________*/
+    
+		/*---------------send-start-----------------------*/
+   .postSendBody{
+    background:white;
+    background-image: url('../img/content/bg.gif');
+    background-attachment:fixed;
+    padding:5px;
+   // min-height:200px;
+    border:1px solid black;
+    border-radius:0 0 5 5;
+    //border-top-right-radius:none;
+    //border-top-left-radius:none;
+    overflow:auto;
+    margin-bottom:2px;
+    position:sticky;
+    top:0;
+    z-index:99
+
+}
+.postSendBody .postUser{
+    margin:2px;
+    //background:red;
+    overflow:auto;
+}
+.postSendBody .postUser .pic{
+    height:30px;
+    width:30px;
+    background:#E31AAD;
+    border:1px solid #92278F;
+    border-radius:50%;
+    overflow:hidden;
+    float:left;
+}
+  .postSendBody .postUser .name{
+    float:left;	
+    margin:2px;
+}
+  .postSendBody .postBodyMain .SendPTxt{
+     // width:100%;
+     // background:red; 
+     // border:none;
+  }
+  .postSendBody .postBodyMain{
+    //background:red;
+    padding:5px;
+   // min-height:200px;
+    //width:80%;
+    border:1px solid black;
+    border-radius:5px;
+    //float:left;
+    overflow:auto;
+
+}
+    .postSendBody .postAction{
+    //background:red;
+    padding:5px;
+    //min-height:200px;
+    //width:13%;
+    border:1px solid black;
+    border-radius:5px;
+    //float:right;
+    text-align:center;
+    position:relative;
+    margin:5 0;
+    overflow:auto;
+}
+ .postSendBody .postAction div.light,div.comment,div.block{
+    display:inline;
+    margin:0 25;
+    overflow:auto;
+}
+.postSendBody .postAction div.light{
+    float:left;
+    //width:auto;
+}
+.postSendBody .postAction div.comment{
+    //float:left;
+    //margin:auto;
+    //width:auto;
+}
+.postSendBody .postAction div.block{
+    float:right;
+    //margin:auto;
+}
+    /*---------------send-end-----------------------*/
+    /*---------------post-start-----------------------*/
+    .postBody{
+        //background:red;
+        padding:5px;
+       // min-height:50%;   
+        border:1px solid black;
+        border-radius:5px;
+        overflow:auto;
+		margin-bottom:2px;
+
+    }
+    .postBody .postUser{
+        margin:2px;
+        //background:red;
+        overflow:auto;
+    }
+    .postBody .postUser .pic{
+        height:30px;
+        width:30px;
+        background:#E31AAD;
+        border:1px solid #92278F;
+        border-radius:50%;
+        overflow:hidden;
+        float:left;
+    }
+    .postBody .postUser .name{
+        float:left;	
+        margin:2px;
+    }
+    .postBody .postBodyMain{
+        //background:red;
+        padding:5px;
+        //min-height:50%;
+        //width:80%;
+        border:1px solid black;
+        border-radius:5px;
+        //float:left;
+        overflow:auto;
+
+    }
+    .postBody .postBodyMain .pPic{
+        //border:1px solid black;
+        border-radius:5px;
+        //float:left;
+        margin:3 3;
+        position:relative;
+    }    
+    .postBody .postBodyMain .pPic .pImg{
+        min-width:80%; max-width:95%; max-height:500px;
+    }
+    .postBody .postBodyMain .pText{
+        //border:1px solid black;
+        border-radius:5px;
+        //float:left;
+        margin:0 3;
+        position:relative;
+        padding:5px;
+        //min-height:50px;
+    }
+    .postBody .postAction{
+        //background:red;
+        padding:5px;
+        //min-height:200px;
+        //width:13%;
+        border:1px solid black;
+        border-radius:5px;
+        //float:right;
+        text-align:center;
+        position:relative;
+        margin:5 0;
+    }
+    .postBody .postAction div.light,div.comment,div.block{
+        display:inline;
+        margin:0 25;
+    }
+    .postBody .postAction div.light #file{
+    }
+    .postBody .postAction div.light{
+        float:left;
+        //width:auto;
+    }
+    .postBody .postAction div.comment{
+        //float:left;
+        //margin:auto;
+        //width:auto;
+    }
+    .postBody .postAction div.block{
+        float:right;
+        //margin:auto;
+    }
+    /*---------------post-end-----------------------*/
+ /*_________________home_page_end___________________________*/
+ 
+/*_________________message-page-start___________________________*/
+.frndMsgForm .friend button{
+}
+.friend{
+    padding:5px;
+    min-height:20px;
+    border:1px solid black;
+    border-radius:5px;
+    overflow:auto;
+    margin: 3 0;
+    position: relative;
+
+}
+.friend .img{
+    height:50px;
+    width:50px;
+    background:#E31AAD;
+    border:1px solid #92278F;
+    border-radius:50%;
+    overflow:hidden;
+    //float:left;   
+    margin:auto;
+}
+.friend .img img{
+
+}
+.friend .frndName{
+   // float:left;	
+    margin:18 5;
+    color:#E31AAD;
+    text-align: center;
+}
+/*_________________message-page-end___________________________*/
+
+}
+@media screen and (min-width: 600px) {
+
+    /*_________________header_page_start___________________________*/
+    *{
+        margin:0;
+    }
+    .header{
+        padding:10px;
+        background:black;
+        color:#E31AAD;
+        overflow:auto;
+        width:600px;
+        margin:auto;
+    }
+    .header .headerLeft{
+        float:left;
+    }
+    .header .headerLeft .brand{
+        font-size:50px;
+        font-weight:bold;
+    }
+    .header .headerLeft .menu{
+        margin-bottom:0;
+    }
+    ul.hdrMenu{
+        margin-left:-40;
+        text-align:left;
+    }
+    ul.hdrMenu li{
+        display:inline;
+    }
+    ul.hdrMenu li a{
+        color:#E31AAD;
+        text-decoration:none;
+    }
+    .header .headerPicCover{
+        margin-right:10px;
+        float:right;
+        border-radius:50%;
+        border:5px double #EC008C;
+
+    }
+    .header .headerPic img{
+        max-height:100px; max-width:100px;   margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .header .headerPic{
+        background:#92278F;
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        text-align:center;
+        //border:5px dashed #EC008C;
+        overflow: hidden;
+        position: relative;
+    }
+    /*_________________header_page_end___________________________*/
+
+    /*_________________content_start___________________________*/
+    section.content{	
+        padding:10px;
+        background:tomato;
+        background-image: url('../img/content/bg.gif');
+        background-attachment:fixed;
+        color:#E31AAD;
+        overflow:auto;
+        width:600px;
+        margin:auto;
+    }
+    section.content .slide img{
+        max-width: 94px;
+        max-height: 500px;
+    }
+    section.content .slide{
+        float:left;
+        //background:red;
+        margin:2px;
+        border:1px solid black;
+        border-radius:5px;
+        width:94px;
+        height:500px;
+        overflow: hidden;
+    }
+    section.content .contentBody{
+        width:494px;
+        height:500px;
+        float:left;
+        //background:green;
+        margin:2px;
+        border:1px solid black;
+        border-radius:5px;
+        overflow-x:auto;
+    }
+    section.content .contentBody .contentMain{
+        //background:red;
+        margin:0 10px;
+        position: relative;
+       // background:red;
+        height: 100%;
+    }
+    /*_________________content_end___________________________*/
+    /*_________________footer_page_start___________________________*/
+    footer{
+        padding:10px;
+        background:black;
+        color:#E31AAD;
+        overflow:auto;
+        width:600px;
+        margin:auto;
+    }
+    footer .left{
+        float:left;
+    }
+    footer .right{
+        float:right;
+    }
+    /*_________________footer_page_end___________________________*/
+    
+    /*_________________home_page_start___________________________*/
+		/*---------------send-start-----------------------*/
+   .postSendBody{
+    background:white;
+    background-image: url('../img/content/bg.gif');
+    background-attachment:fixed;
+    padding:5px;
+   // min-height:200px;
+    border:1px solid black;
+    border-radius:0 0 5 5;
+    //border-top-right-radius:none;
+    //border-top-left-radius:none;
+    overflow:auto;
+    margin-bottom:2px;
+    position:sticky;
+    top:0;
+    z-index:99
+
+}
+.postSendBody .postUser{
+    margin:2px;
+    //background:red;
+    overflow:auto;
+    position: relative;
+}
+.postSendBody .postUser .pic img{
+    max-height:30px; max-width:30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.postSendBody .postUser .pic{
+    height:30px;
+    width:30px;
+    background:#E31AAD;
+    border:1px solid #92278F;
+    border-radius:50%;
+    overflow:hidden;
+    float:left;
+    position: relative;
+}
+  .postSendBody .postUser .name{
+    float:left;	
+    margin:2px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+  .postSendBody .postBodyMain .SendPTxt{
+     // width:100%;
+     // background:red; 
+     // border:none;
+  }
+  .postSendBody .postBodyMain{
+    //background:red;
+    padding:5px;
+   // min-height:200px;
+    //width:80%;
+    border:1px solid black;
+    border-radius:5px;
+    //float:left;
+    overflow:auto;
+
+}
+.postSendBody .postBodyMain textarea{
+    max-width: 100%;
+}
+    .postSendBody .postAction{
+    //background:red;
+    padding:5px;
+    //min-height:200px;
+    //width:13%;
+    border:1px solid black;
+    border-radius:5px;
+    //float:right;
+    text-align:center;
+    position:relative;
+    margin:5 0;
+    overflow:auto;
+}
+ .postSendBody .postAction div.light,div.comment,div.block{
+    display:inline;
+    margin:0 25;
+    overflow:auto;
+}
+.postSendBody .postAction div.light{
+    float:left;
+    //width:auto;
+}
+.postSendBody .postAction div.comment{
+    //float:left;
+    //margin:auto;
+    //width:auto;
+}
+.postSendBody .postAction div.block{
+    float:right;
+    //margin:auto;
+}
+    /*---------------send-end-----------------------*/
+    /*---------------post-start-----------------------*/
+.postBody{
+    //background:red;
+    padding:5px;
+    min-height:20px;
+    border:1px solid black;
+    border-radius:5px;
+    overflow:auto;
+    margin-bottom:2px;
+
+}
+.postBody .postUser{
+    margin:2px;
+    //background:red;
+    overflow:auto;
+}
+.postBody .postUser .pic img{
+    max-height:30px; max-width:30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.postBody .postUser .pic{
+    height:30px;
+    width:30px;
+    background:#E31AAD;
+    border:1px solid #92278F;
+    border-radius:50%;
+    overflow:hidden;
+    float:left;
+    position: relative;
+}
+.postBody .postUser .name{
+    float:left;	
+    margin:2px;
+}
+.postBody .postBodyMain{
+    //background:rgb(68, 233, 18);
+    padding:5px;
+    //min-height:200px;
+    //width:80%;
+    //border:1px solid black;
+    border-radius:5px;
+    //float:left;
+    overflow:auto;
+
+}
+.postBody .postBodyMain center{
+}
+.postBody .postBodyMain .pPic{
+    //border:1px solid black;
+    border-radius:5px;
+    //float:left;
+    margin:3 3;
+    position:relative;
+}
+.postBody .postBodyMain .pPic .pImg{
+    min-width:50px; 
+    max-width:400px;
+    max-height:150px;
+}
+.postBody .postBodyMain .pText{
+    //border:1px solid black;
+    //background:red;
+    border-radius:5px;
+    //float:left;
+    //margin:0 0;
+    position:relative;
+    padding:5px;
+    word-wrap:break-word;
+    //min-height:50px;
+}
+.postBody .postAction{
+    //background:red;
+    padding:5px;
+    //min-height:200px;
+    //width:13%;
+    //border:1px solid black;
+    border-radius:5px;
+    //float:right;
+    text-align:center;
+    position:relative;
+    margin:5 0;
+}
+.postBody .postAction div.light,div.comment,div.block{
+    display:inline;
+    margin:0 25;
+}
+.postBody .postAction div.light{
+    float:left;
+    //width:auto;
+}
+.postBody .postAction div.comment{
+    //float:left;
+    //margin:auto;
+    //width:auto;
+}
+.postBody .postAction div.block{
+    float:right;
+    //margin:auto;
+}
+    /*---------------post-end-----------------------*/
+/*_________________home_page_end___________________________*/
+/*_________________message-page-start___________________________*/
+.frndMsgForm .friend button{
+}
+.friend{
+    padding:5px;
+    min-height:20px;
+    border:1px solid black;
+    border-radius:5px;
+    overflow:auto;
+    margin: 3 0;
+    position: relative;
+
+}
+.friend .img{
+    height:50px;
+    width:50px;
+    background:#E31AAD;
+    border:1px solid #92278F;
+    border-radius:50%;
+    overflow:hidden;
+    float:left;   
+    position: relative;
+}
+.friend .img img{
+    max-height:50px;
+    max-width:50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.friend .frndName{
+    float:left;	
+    margin:18 5;
+    color:#E31AAD;
+}
+.friend .frndChatIcn{
+    float: right;;	
+    margin:18 5;
+    color:#E31AAD;
+}
+/*_________________message-page-end___________________________*/
+/*_________________message-chat-page-start___________________________*/
+.msgChat{
+    width: 100%;
+   // background: black;
+    padding: 5px;
+    overflow:auto;
+}
+ /*-----------my-end-------*/
+.msgChat .myMsg{
+    float:right;
+    max-width:80%;
+   // background: red;
+    padding: 5px;
+}
+.msgChat .myMsg .myText{
+    //background:green;
+    float: left;
+    width:200px;
+    min-height: 25px;
+    margin-right: 5px;
+    border:1px solid black;
+    border-radius:5px;
+    overflow: auto;
+    padding: 5px;
+    word-wrap: break-word;
+}
+.msgChat .myMsg .myPic{
+    background: #92278F;
+    width: 25px;
+    height: 25px;
+    float: right;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.msgChat .myMsg .myPic img{
+    max-height:25px;
+    max-width:25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ /*-----------my-end-------*/
+ /*-----------friend-start--------*/
+.msgChat .frndMsg{
+    float: left;;
+    max-width:80%;
+   // background: red;
+    padding: 5px;
+}
+.msgChat .frndMsg .frndText{
+   // background:green;
+    float: right;
+    width:200px;
+    min-height: 25px;
+    margin-right: 5px;
+    border:1px solid black;
+    border-radius:5px;
+    overflow: auto;
+    padding: 5px;
+    word-wrap: break-word;
+}
+.msgChat .frndMsg .frndPic{
+    background: #92278F;
+    width: 25px;
+    height: 25px;
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.msgChat .frndMsg .frndPic img{
+    max-height:25px; 
+    max-width:25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ /*-----------friend-end-------*/
+ /*-----------my-send-start-------*/
+    .mySendBody{
+    background:white;
+    background-image: url('../img/content/bg.gif');
+    background-attachment:fixed;
+    padding:5px;
+    border:1px solid black;
+    border-radius:5 5 0 0;
+    overflow:auto;
+    margin-bottom:2px;
+    position:sticky;
+    bottom:0;
+	margin:0;
+    z-index:99;
+    width: 99%;
+
+}
+  .mySendBody .postBodyMain{
+    padding:5px;
+    width:80%;
+    border:1px solid black;
+    border-radius:5px;
+    float:left;
+    overflow:auto;
+
+}    .mySendBody .postAction{
+    padding:5px;
+    width:13%;
+    border:1px solid black;
+    border-radius:5px;
+    float:right;
+    text-align:center;
+    overflow:auto;
+}
+ /*-----------my-send-end-------*/
+/*_________________message-chat-page-end___________________________*/
+
+}

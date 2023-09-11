@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.5
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jan 31, 2020 at 03:30 PM
+- Server version: 10.1.38-MariaDB
+- PHP Version: 7.3.2
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="sharebook" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="admin">
+                CREATE TABLE `admin` (
+                  `id` int(2) NOT NULL AUTO_INCREMENT,
+                  `name` int(50) NOT NULL,
+                  `email` int(50) NOT NULL,
+                  `password` int(8) NOT NULL,
+                  `image` int(255) NOT NULL,
+                  `activationStatus` tinyint(1) NOT NULL,
+                  `deletionStatus` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="ads">
+                CREATE TABLE `ads` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `userId` int(255) NOT NULL,
+                  `adsPic` varchar(255) NOT NULL,
+                  `adsText` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="comment">
+                CREATE TABLE `comment` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `postId` int(255) NOT NULL,
+                  `commentWriterId` int(255) NOT NULL,
+                  `deletionStatus` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="msg">
+                CREATE TABLE `msg` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `senderId` int(255) NOT NULL,
+                  `receiverId` int(255) NOT NULL,
+                  `msg` varchar(255) NOT NULL,
+                  `dateAndTime` datetime NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="msgserial">
+                CREATE TABLE `msgserial` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `myId` int(255) NOT NULL COMMENT 'step2',
+                  `frndId` int(255) NOT NULL COMMENT 'step2',
+                  `time` time NOT NULL,
+                  `date` date NOT NULL,
+                  `deletionStatus` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="post">
+                CREATE TABLE `post` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `writerId` int(255) NOT NULL,
+                  `postText` varchar(255) NOT NULL,
+                  `postImage` varchar(255) NOT NULL,
+                  `deletionStatus` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="report">
+                CREATE TABLE `report` (
+                  `id` int(11) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="star">
+                CREATE TABLE `star` (
+                  `id` int(11) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `id` int(255) NOT NULL AUTO_INCREMENT,
+                  `name` text NOT NULL,
+                  `email` varchar(50) NOT NULL,
+                  `password` varchar(8) NOT NULL,
+                  `image` varchar(255) NOT NULL,
+                  `deletionStatus` tinyint(1) NOT NULL,
+                  `activeStatus` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="virtualid">
+                CREATE TABLE `virtualid` (
+                  `usrId` int(255) NOT NULL,
+                  `VirtualId` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`VirtualId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'sharebook'
+    -->
+    <database name="sharebook">
+        <!-- Table admin -->
+        <!-- Table ads -->
+        <!-- Table comment -->
+        <!-- Table msg -->
+        <table name="msg">
+            <column name="id">1</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">how are you?</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">2</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">fine</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">3</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">and you?</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">4</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">pretty good</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">5</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">tai naki</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">6</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">hmm. i am very fine.</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">7</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">and i am also</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">8</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">very good</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">9</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hmm</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">10</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">some text 2</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">11</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">some text 3</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">12</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">fasfasdf</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">13</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">3</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">14</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">3</column>
+            <column name="msg">how are you?</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">15</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">3</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">16</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">3</column>
+            <column name="msg">how are you?</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">17</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">aaaaaaaa</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">18</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">aaaaaaaa</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">19</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">asdfad</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">20</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">asdfad</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">21</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">asdfad</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">22</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">asdfad</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">23</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">aa</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">24</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">3</column>
+            <column name="msg">asdfdsaf</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">25</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">ASFASFASD</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">26</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">27</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">3</column>
+            <column name="msg">xzcx</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">28</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">29</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">3</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">30</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hello</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">31</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">32</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">1</column>
+            <column name="msg">afa</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">33</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">3</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">34</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">35</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">2</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">36</column>
+            <column name="senderId">1</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <table name="msg">
+            <column name="id">37</column>
+            <column name="senderId">2</column>
+            <column name="receiverId">1</column>
+            <column name="msg">hi</column>
+            <column name="dateAndTime">0000-00-00 00:00:00</column>
+        </table>
+        <!-- Table msgserial -->
+        <table name="msgserial">
+            <column name="id">13</column>
+            <column name="myId">1</column>
+            <column name="frndId">3</column>
+            <column name="time">00:00:00</column>
+            <column name="date">0000-00-00</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="msgserial">
+            <column name="id">21</column>
+            <column name="myId">2</column>
+            <column name="frndId">3</column>
+            <column name="time">00:00:00</column>
+            <column name="date">0000-00-00</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="msgserial">
+            <column name="id">22</column>
+            <column name="myId">3</column>
+            <column name="frndId">2</column>
+            <column name="time">00:00:00</column>
+            <column name="date">0000-00-00</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="msgserial">
+            <column name="id">28</column>
+            <column name="myId">1</column>
+            <column name="frndId">1</column>
+            <column name="time">00:00:00</column>
+            <column name="date">0000-00-00</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="msgserial">
+            <column name="id">29</column>
+            <column name="myId">2</column>
+            <column name="frndId">1</column>
+            <column name="time">00:00:00</column>
+            <column name="date">0000-00-00</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="msgserial">
+            <column name="id">30</column>
+            <column name="myId">1</column>
+            <column name="frndId">2</column>
+            <column name="time">00:00:00</column>
+            <column name="date">0000-00-00</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <!-- Table post -->
+        <table name="post">
+            <column name="id">4</column>
+            <column name="writerId">1</column>
+            <column name="postText">some text</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">5</column>
+            <column name="writerId">1</column>
+            <column name="postText">zahid</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">6</column>
+            <column name="writerId">1</column>
+            <column name="postText">joynab</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">7</column>
+            <column name="writerId">1</column>
+            <column name="postText">success</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">8</column>
+            <column name="writerId">1</column>
+            <column name="postText">aaaaaaaaaaaa</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">9</column>
+            <column name="writerId">1</column>
+            <column name="postText">i am writing</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">11</column>
+            <column name="writerId">1</column>
+            <column name="postText">I AM WRITING</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">12</column>
+            <column name="writerId">1</column>
+            <column name="postText">I am writing</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">14</column>
+            <column name="writerId">1</column>
+            <column name="postText">zahid hasan</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">15</column>
+            <column name="writerId">1</column>
+            <column name="postText">zoynab</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">16</column>
+            <column name="writerId">2</column>
+            <column name="postText">zahid</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">17</column>
+            <column name="writerId">2</column>
+            <column name="postText">joynab</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">18</column>
+            <column name="writerId">1</column>
+            <column name="postText">some text</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">19</column>
+            <column name="writerId">2</column>
+            <column name="postText">thisis also some text</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">20</column>
+            <column name="writerId">1</column>
+            <column name="postText">this is onother text</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">21</column>
+            <column name="writerId">1</column>
+            <column name="postText">zahid</column>
+            <column name="postImage">assets/frontend/img/user/z.jpg</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">24</column>
+            <column name="writerId">2</column>
+            <column name="postText">joynab</column>
+            <column name="postImage">assets/frontend/img/user/j.jpg</column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">25</column>
+            <column name="writerId">1</column>
+            <column name="postText">à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à¦¾à¥¤ à¦•à¦¿à¦›à§ à¦²à§‡à¦–à</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">26</column>
+            <column name="writerId">1</column>
+            <column name="postText">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext texttexttexttexttextt</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">27</column>
+            <column name="writerId">2</column>
+            <column name="postText">â¤</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <table name="post">
+            <column name="id">28</column>
+            <column name="writerId">1</column>
+            <column name="postText">â¤</column>
+            <column name="postImage"></column>
+            <column name="deletionStatus">0</column>
+        </table>
+        <!-- Table report -->
+        <!-- Table star -->
+        <!-- Table user -->
+        <table name="user">
+            <column name="id">1</column>
+            <column name="name">zahid</column>
+            <column name="email">zahid@gmail.com</column>
+            <column name="password">admin</column>
+            <column name="image">assets/frontend/img/user/z.jpg</column>
+            <column name="deletionStatus">0</column>
+            <column name="activeStatus">1</column>
+        </table>
+        <table name="user">
+            <column name="id">2</column>
+            <column name="name">joynab</column>
+            <column name="email">joynab@gmail.com</column>
+            <column name="password">admin</column>
+            <column name="image">assets/frontend/img/user/j.jpg</column>
+            <column name="deletionStatus">0</column>
+            <column name="activeStatus">1</column>
+        </table>
+        <table name="user">
+            <column name="id">3</column>
+            <column name="name">USER</column>
+            <column name="email">user@gmail.com</column>
+            <column name="password">admin</column>
+            <column name="image"></column>
+            <column name="deletionStatus">0</column>
+            <column name="activeStatus">1</column>
+        </table>
+        <!-- Table virtualid -->
+    </database>
+</pma_xml_export>
